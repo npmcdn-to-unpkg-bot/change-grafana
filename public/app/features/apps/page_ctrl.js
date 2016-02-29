@@ -1,0 +1,4 @@
+/*! grafana - v3.0.0-pre1 - 2016-02-22
+ * Copyright (c) 2016 Torkel Ödegaard; Licensed Apache-2.0 */
+
+System.register(["angular","lodash"],function(a){var b,c,d;return{setters:[function(a){b=a},function(a){c=a}],execute:function(){d=function(){function a(a,b,d){var e=this;this.backendSrv=a,this.$routeParams=b,this.$rootScope=d,this.appId=b.appId,this.backendSrv.get("/api/org/apps/"+this.appId+"/settings").then(function(a){e.appModel=a,e.page=c["default"].findWhere(a.pages,{slug:e.$routeParams.slug}),e.page||d.appEvent("alert-error",["App Page Not Found",""])})}return a.$inject=["backendSrv","$routeParams","$rootScope"],a}(),a("AppPageCtrl",d),b["default"].module("grafana.controllers").controller("AppPageCtrl",d)}}});

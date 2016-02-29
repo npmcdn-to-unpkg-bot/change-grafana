@@ -1,0 +1,78 @@
+.grafana-app {
+  display: block;
+  height: 100%;
+}
+
+.dashboard-container {
+  padding: $spacer / 2;
+  width: 100%;
+}
+
+.main-view {
+  height: 100%;
+}
+
+.page-dashboard {
+  .main-view {
+    background-image: none;
+  }
+}
+
+.page-container {
+  background-color: $page-bg;
+  padding: ($spacer * 2) ($spacer * 4);
+  max-width: 1060px;
+  min-height: calc(100% - 54px);
+  padding-bottom: $spacer * 5;
+  background-image: linear-gradient(60deg, transparent 70%, darken($page-bg, 4%) 98%)
+}
+
+.page-header {
+  padding: $spacer 0 $spacer/2 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap-reverse;
+  border-image: linear-gradient(to right, rgba(255,213,0,1) 0%, rgba(255,68,0,1) 99%, rgba(255,68,0,1) 100%);
+  border-image-slice: 1;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid transparent;
+
+  h1 {
+    font-style: italic;
+    flex-grow: 1;
+  }
+  button, a {
+    margin-left: $spacer;
+  }
+  margin-bottom: 2rem;
+}
+
+.page-heading {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: $spacer * 0.7;
+}
+
+.admin-page {
+  max-width: 800px;
+  margin-left: 10px;
+  .gf-box {
+    margin-top: 0;
+  }
+  .gf-box-body {
+    min-height: 0;
+  }
+  h2 {
+    margin-left: 15px;
+    margin-bottom: 0px;
+    font-size: $font-size-lg;
+    color: $text-color;
+    i {
+      padding-right: 6px;
+    }
+  }
+}
+

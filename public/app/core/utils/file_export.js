@@ -1,0 +1,4 @@
+/*! grafana - v3.0.0-pre1 - 2016-02-22
+ * Copyright (c) 2016 Torkel Ödegaard; Licensed Apache-2.0 */
+
+System.register(["lodash"],function(a){function b(a){var b="Series;Time;Value\n";e["default"].each(a,function(a){e["default"].each(a.datapoints,function(c){b+=a.alias+";"+new Date(c[1]).toISOString()+";"+c[0]+"\n"})}),d(b,"grafana_data_export.csv")}function c(a){var b="";e["default"].each(a.columns,function(a){b+=a.text+";"}),b+="\n",e["default"].each(a.rows,function(a){e["default"].each(a,function(a){b+=a+";"}),b+="\n"}),d(b,"grafana_data_export.csv")}function d(a,b){var c=new Blob([a],{type:"text/csv;charset=utf-8"});window.saveAs(c,b)}var e;return a("exportSeriesListToCsv",b),a("exportTableDataToCsv",c),a("saveSaveBlob",d),{setters:[function(a){e=a}],execute:function(){}}});

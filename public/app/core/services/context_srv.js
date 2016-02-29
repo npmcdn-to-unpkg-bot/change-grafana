@@ -1,0 +1,4 @@
+/*! grafana - v3.0.0-pre1 - 2016-02-22
+ * Copyright (c) 2016 Torkel Ödegaard; Licensed Apache-2.0 */
+
+define(["angular","lodash","../core_module","app/core/store","app/core/config"],function(a,b,c,d,e){"use strict";c["default"].service("contextSrv",function(){function a(){e.bootData.user&&b.extend(this,e.bootData.user)}this.hasRole=function(a){return this.user.orgRole===a},this.setPinnedState=function(a){this.pinned=a,d.set("grafana.sidemenu.pinned",a)},this.toggleSideMenu=function(){this.sidemenu=!this.sidemenu,this.sidemenu||this.setPinnedState(!1)},this.pinned=d.getBool("grafana.sidemenu.pinned",!1),this.pinned&&(this.sidemenu=!0),this.version=e.buildInfo.version,this.lightTheme=!1,this.user=new a,this.isSignedIn=this.user.isSignedIn,this.isGrafanaAdmin=this.user.isGrafanaAdmin,this.isEditor=this.hasRole("Editor")||this.hasRole("Admin")})});

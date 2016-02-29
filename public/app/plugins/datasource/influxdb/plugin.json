@@ -1,0 +1,9 @@
+{
+  "type": "datasource",
+  "name": "InfluxDB",
+  "id": "influxdb",
+
+  "defaultMatchFormat": "regex values",
+  "metrics": true,
+  "annotations": true
+}
